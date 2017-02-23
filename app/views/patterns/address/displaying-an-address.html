@@ -1,38 +1,45 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GOV.UK prototype kit
+    GOV.UK prototype kit
 {% endblock %}
 
 {% block content %}
 
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+    <main id="content" role="main">
+        <div class="grid-row">
+            <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        Displaying an address
-      </h1>
-      <p>This is an HMRC pattern</p>
-      <p>This pattern is used in the <a href="#">Personal tax account</a></p>
-      <h2 class="heading-medium">When to use this pattern</h2>
-      <p>Use this pattern when you need to tell a user the address or addresses that you hold for them.</p>
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Address</span>
+                    Displaying an address
+                </h1>
+                <p>This is an HMRC pattern</p>
+                <p>This pattern is used in the
+                    <a href="#">Personal tax account</a>
+                </p>
+                <h2 class="heading-medium">When to use this pattern</h2>
+                <p>Use this pattern when you need to tell a user the address or addresses that you hold for them.</p>
 
-      <div class="example">
-        <p class="bold-xsmall">You have lived at this address since 7 January 2014.</p>
-        <address class="">
-          11 Street Name <br>
-          Town <br>
-          County <br>
-          GH14 7ED
-        </address>
-        <br>
-        <div class="form-group">
-          <input type="submit" class="button" value="Change your address">
-        </div>
-      </div>
+                <div class="example">
+                    <h1 class="heading-large">Your address</h1>
+                    <p class="bold-xsmall">You have lived at this address since 7 January 2014.</p>
+                    <address class="">
+                        11 Street Name
+                        <br>
+                        Town
+                        <br>
+                        County
+                        <br>
+                        GH14 7ED
+                    </address>
+                    <br>
+                    <div class="form-group">
+                        <input type="submit" class="button" value="Change your address">
+                    </div>
+                </div>
 
-      <pre>
+                <pre>
         <code class="language-markup">
           &lt;p class=&quot;bold-xsmall&quot;&gt;You have lived at this address since 7 January 2014.&lt;/p&gt;
           &lt;address class=&quot;&quot;&gt;
@@ -47,17 +54,17 @@
           &lt;/div&gt;
         </code>
       </pre>
-      <!-- @todo there is to much padding on the left of this need to figure out what's not working corectly -->
+                <!-- @todo there is to much padding on the left of this need to figure out what's not working corectly -->
 
-      <h2 class="heading-medium">How to use this pattern</h2>
-      <p>When telling a user the address an organisation holds for them:</p>
-      <ul class="list list-bullet">
-        <li>tell them the last date that the information was changed</li>
-        <li>give them the opportunity to edit the address if the information is wrong</li>
-        <li>tell them if there are any consequences to them for the organisation holding the wrong address</li>
-      </ul>
+                <h2 class="heading-medium">How to use this pattern</h2>
+                <p>When telling a user the address an organisation holds for them:</p>
+                <ul class="list list-bullet">
+                    <li>tell them the last date that the information was changed</li>
+                    <li>give them the opportunity to edit the address if the information is wrong</li>
+                    <li>tell them if there are any consequences to them for the organisation holding the wrong address</li>
+                </ul>
 
-      <!-- <h2>Patterns in this group</h2>
+                <!-- <h2>Patterns in this group</h2>
       <ul>
         <li><a href="#">Free text</a></li>
         <li><a href="#">Multiple fields</a></li>
@@ -68,9 +75,8 @@
         <li><a href="#">Editing an address</a></li>
       </ul> -->
 
-
-    </div>
-  </div>
-</main>
+            </div>
+        </div>
+    </main>
 
 {% endblock %}

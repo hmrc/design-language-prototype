@@ -1,23 +1,52 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GOV.UK prototype kit
+    GOV.UK prototype kit
 {% endblock %}
 
 {% block content %}
 
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+    <main id="content" role="main">
+        <div class="grid-row">
+            <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        Editing an address
-      </h1>
-      <p>
-        [Introductory content telling people about the address pattern]
-      </p>
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Address</span>
+                    Editing an address
+                </h1>
+                <p>This is an HMRC pattern</p>
+                <p>This pattern is used in the
+                    <a href="#">Personal tax account</a>
+                </p>
 
-      <!-- <h2>Patterns in this group</h2>
+                <h2 class="heading-medium">When to use this pattern</h2>
+                <p>Use this pattern when a user needs to edit an address because:</p>
+                <ul class="list list-bullet">
+                    <li>the address held is incorrect</li>
+                    <li>they have selected an address from a list and need to edit it to match their own address</li>
+                </ul>
+                <div class="example">
+                    <h1 class="heading-large">
+                        Edit your address
+                    </h1>
+                    <form class="" action="index.html" method="post">
+                        <label class="form-label" for="building_and_street">Address</label>
+                        <input class="form-control" type="text" name="building_and_street" value="11 Street Name"><br><br>
+                        <input class="form-control" type="text" name="building_and_street" value="Town"><br><br>
+                        <!-- <label class="form-label" for="town_or_city">Town or city</label> -->
+                        <input class="form-control" type="text" name="town_or_city" value="County"><br><br>
+                        <!-- <label class="form-label" for="County">County (optional)</label> -->
+                        <input class="form-control" type="text" name="County" value=""><br><br>
+                        <label class="form-label" for="Postcode">Postcode</label>
+                        <input class="form-control form-control-1-3" type="text" name="Postcode" value="NW1 1AD"><br><br>
+                    </form>
+                    <div class="form-group">
+                        <br>
+                        <input type="submit" class="button" value="Continue">
+                    </div>
+                </div>
+
+                <!-- <h2>Patterns in this group</h2>
       <ul>
         <li><a href="#">Free text</a></li>
         <li><a href="#">Multiple fields</a></li>
@@ -28,9 +57,8 @@
         <li><a href="#">Editing an address</a></li>
       </ul> -->
 
-
-    </div>
-  </div>
-</main>
+            </div>
+        </div>
+    </main>
 
 {% endblock %}

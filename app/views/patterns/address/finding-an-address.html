@@ -1,57 +1,79 @@
 {% extends "layout.html" %}
-
 {% block page_title %}
-  GOV.UK prototype kit
+    GOV.UK prototype kit
 {% endblock %}
-
 {% block content %}
 
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+    <main id="content" role="main">
+        <div class="grid-row">
+            <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        Finding an address
-      </h1>
-      <p>This is an HMRC pattern</p>
-      <p>This pattern is used in the <a href="#">Personal tax account</a></p>
-      <h2 class="heading-medium">When to use this pattern</h2>
-      <p>Use this pattern to allow user to look up their address.</p>
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Address</span>
+                    Finding an address
+                </h1>
+                <p>This is an HMRC pattern</p>
+                <p>This pattern is used in the
+                    <a href="#">Personal tax account</a>
+                </p>
+                <h2 class="heading-medium">When to use this pattern</h2>
+                <p>Use this pattern to allow user to look up their address.</p>
 
-      <div class="example">
-        <label class="form-label" for="postcode">Postcode</label>
-        <input class="form-control form-control-1-3" type="text" name="postcode" value=""><br><br>
-        <label class="form-label" for="postcode">House name or number (optional)</label>
-        <input class="form-control" type="text" name="postcode" value=""><br><br>
-        <div class="form-group">
-          <input type="submit" class="button" value="Find your address">
+                <div class="example">
+                    <h1 class="heading-large">Find your address</h1>
+                    <label class="form-label" for="postcode">Postcode</label>
+                    <input class="form-control form-control-1-3" type="text" name="postcode" value=""><br><br>
+                    <label class="form-label" for="postcode">House name or number (optional)</label>
+                    <input class="form-control" type="text" name="postcode" value=""><br><br>
+                    <div class="form-group">
+                        <br>
+                        <input type="submit" class="button" value="Find your address">
+                    </div>
+                </div>
+
+                <h2 class="heading-medium">How to use this pattern</h2>
+                <p>When finding an address for users:</p>
+                <ul class="list list-bullet">
+                    <li>allow them to enter their postcode with spaces</li>
+                    <li>allow them to enter their postcode in upper cxase or lowercase</li>
+                    <li>don't require them to know the number of the house or building</li>
+                </ul>
+                <!-- @todo should we say house or building? building is more generic. -->
+
+                <h2 class="heading-medium">Error states</h2>
+
+                <div class="example">
+                    <div class="error-summary" role="group" aria-labelledby="error-summary-heading-example-1" tabindex="-1">
+                        <h1 class="heading-medium error-summary-heading" id="error-summary-heading-example-1">
+                            Message to alert the user to a problem goes here
+                        </h1>
+                        <p>
+                            Optional description of the errors and how to correct them
+                        </p>
+                        <ul class="error-summary-list">
+                            <li>
+                                <a href="#example-personal-details">Descriptive link to the question with an error</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h1 class="heading-large">Find your address</h1>
+                    <div class="form-group error">
+                        <span class="error-message">
+                            Enter a valid postcode
+                        </span>
+                        <label class="form-label" for="postcode">Postcode</label>
+                        <input class="form-control form-control-1-3" type="text" name="postcode" value=""><br><br>
+                    </div>
+                    <label class="form-label" for="postcode">House name or number (optional)</label>
+                    <input class="form-control" type="text" name="postcode" value=""><br><br>
+                    <div class="form-group">
+                        <br>
+                        <input type="submit" class="button" value="Find your address">
+                    </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-
-      <h2 class="heading-medium">How to use this pattern</h2>
-      <p>When finding an address for users:</p>
-      <ul class="list list-bullet">
-        <li>allow them to enter their postcode with spaces</li>
-        <li>allow them to enter their postcode in upper cxase or lowercase</li>
-        <li>don't require them to know the number of the house or building</li>
-      </ul>
-      <!-- @todo
-      should we say house or building? building is more generic. -->
-
-      <!-- <h2>Patterns in this group</h2>
-      <ul>
-        <li><a href="#">Free text</a></li>
-        <li><a href="#">Multiple fields</a></li>
-        <li><a href="#">Address finder</a></li>
-        <li><a href="#">Displaying an address</a></li>
-        <li><a href="#">Finding an address</a></li>
-        <li><a href="#">Selecting an address</a></li>
-        <li><a href="#">Editing an address</a></li>
-      </ul> -->
-
-
-    </div>
-  </div>
-</main>
+    </main>
 
 {% endblock %}

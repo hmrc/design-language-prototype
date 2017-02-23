@@ -1,62 +1,70 @@
 {% extends "layout.html" %}
 
 {% block page_title %}
-  GOV.UK prototype kit
+    GOV.UK prototype kit
 {% endblock %}
 
 {% block content %}
 
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+    <main id="content" role="main">
+        <div class="grid-row">
+            <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">Selecting an address</h1>
-      <p>This is an HMRC pattern</p>
-      <p>This pattern is used in the <a href="#">Personal tax account</a></p>
-      <h2 class="heading-medium">When to use this pattern</h2>
-      <p>Use this pattern when a user needs to select an address from a list of multiple results.</p>
-      <p>This pattern is normally used in conjunction with the <a href="#">finding an address</a> pattern.</p>
+                <h1 class="heading-xlarge">
+                    <span class="heading-secondary">Address</span>
+                    Selecting an address
+                </h1>
+                <p>This is an HMRC pattern</p>
+                <p>This pattern is used in the
+                    <a href="#">Personal tax account</a>
+                </p>
+                <h2 class="heading-medium">When to use this pattern</h2>
+                <p>Use this pattern when a user needs to select an address from a list of multiple results.</p>
+                <p>This pattern is normally used in conjunction with the
+                    <a href="#">finding an address</a>
+                    pattern.</p>
 
-      <div class="example">
-        <label for="radio-1" class="block-label">
-          <input id="radio-1" type="radio" name="#" value="Part 2">
-          1 Street Name, Town, GH12 4GF
-        </label>
-        <label for="radio-2" class="block-label">
-          <input id="radio-2" type="radio" name="#" value="Part 2">
-          2 Street Name, Town, GH12 4GF
-        </label>
-        <label for="radio-3" class="block-label">
-          <input id="radio-3" type="radio" name="#" value="Part 2">
-          3 Street Name, Town, GH12 4GF
-        </label>
-        <label for="radio-4" class="block-label">
-          <input id="radio-4" type="radio" name="#" value="Part 2">
-          4 Street Name, Town, GH12 4GF
-        </label>
-        <label for="radio-5" class="block-label">
-          <input id="radio-5" type="radio" name="#" value="Part 2">
-          5 Street Name, Town, GH12 4GF
-        </label>
-        <label for="radio-6" class="block-label">
-          <input id="radio-6" type="radio" name="#" value="Part 2">
-          6 Street Name, Town, GH12 4GF
-        </label>
-        <div class="form-group">
-          <br>
-          <a href="#">Enter your address if it's not shown</a><br><br>
-          <input type="submit" class="button" value="Change your address">
-        </div>
-      </div>
+                <div class="example">
+                    <h1 class="heading-large">Select your address</h1>
+                    <label for="radio-1" class="block-label">
+                        <input id="radio-1" type="radio" name="#" value="Part 2">
+                        1 Street Name, Town, GH12 4GF
+                    </label>
+                    <label for="radio-2" class="block-label">
+                        <input id="radio-2" type="radio" name="#" value="Part 2">
+                        2 Street Name, Town, GH12 4GF
+                    </label>
+                    <label for="radio-3" class="block-label">
+                        <input id="radio-3" type="radio" name="#" value="Part 2">
+                        3 Street Name, Town, GH12 4GF
+                    </label>
+                    <label for="radio-4" class="block-label">
+                        <input id="radio-4" type="radio" name="#" value="Part 2">
+                        4 Street Name, Town, GH12 4GF
+                    </label>
+                    <label for="radio-5" class="block-label">
+                        <input id="radio-5" type="radio" name="#" value="Part 2">
+                        5 Street Name, Town, GH12 4GF
+                    </label>
+                    <label for="radio-6" class="block-label">
+                        <input id="radio-6" type="radio" name="#" value="Part 2">
+                        6 Street Name, Town, GH12 4GF
+                    </label>
+                    <div class="form-group">
+                        <br>
+                        <a href="#">Enter your address if it's not shown</a><br><br>
+                        <input type="submit" class="button" value="Change your address">
+                    </div>
+                </div>
 
-      <h2 class="heading-medium">How to use this pattern</h2>
-      <p>When letting a user select an address from a list:</p>
-      <ul class="list list-bullet">
-        <li>how many results should be dislpayed on the page at any time?</li>
-        <li>allow users to enter their address manualy if it's not displayed</li>
-      </ul>
+                <h2 class="heading-medium">How to use this pattern</h2>
+                <p>When letting a user select an address from a list:</p>
+                <ul class="list list-bullet">
+                    <li>how many results should be dislpayed on the page at any time?</li>
+                    <li>allow users to enter their address manualy if it's not displayed</li>
+                </ul>
 
-      <!-- <h2>Patterns in this group</h2>
+                <!-- <h2>Patterns in this group</h2>
       <ul>
         <li><a href="#">Free text</a></li>
         <li><a href="#">Multiple fields</a></li>
@@ -67,9 +75,8 @@
         <li><a href="#">Editing an address</a></li>
       </ul> -->
 
-
-    </div>
-  </div>
-</main>
+            </div>
+        </div>
+    </main>
 
 {% endblock %}
