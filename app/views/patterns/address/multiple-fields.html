@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">Multiple fields</h1>
+      <p>This is a GOV.UK pattern</p>
+
+      <h2 class="heading-medium">Using multiple fields</h2>
+      <p>Only use multiple address fields when you know which regions the addresses will come from and can find a format that supports them all. This can be difficult to know if you’re asking for addresses outside the UK.</p>
+
+      <div class="example">
+        <form class="" action="index.html" method="post">
+          <label class="form-label" for="building_and_street">Building and street</label>
+          <input class="form-control" type="text" name="building_and_street" value=""><br><br>
+          <input class="form-control" type="text" name="building_and_street" value=""><br><br>
+          <label class="form-label" for="town_or_city">Town or city</label>
+          <input class="form-control" type="text" name="town_or_city" value=""><br><br>
+          <label class="form-label" for="County">County (optional)</label>
+          <input class="form-control" type="text" name="County" value=""><br><br>
+          <label class="form-label" for="Postcode">Postcode</label>
+          <input class="form-control form-control-1-3" type="text" name="Postcode" value=""><br><br>
+        </form>
+      </div>
+
+      <h2 class="heading-medium">Advantages of multiple fields</h2>
+      <p>Multiple fields mean:</p>
+      <ul class="list list-bullet">
+        <li>you can easily extract and use specific parts of an address (for example, street names or postcodes)</li>
+        <li>you can give help for individual fields</li>
+        <li>you can validate each part of the address separately</li>
+        <li>users can complete the form using their browser’s auto-complete function</li>
+      </ul>
+
+      <h2 class="heading-medium">Disadvantages of multiple fields</h2>
+      <p>Multiple fields have these disadvantages:</p>
+      <ul class="list list-bullet">
+        <li>it’s hard to find a single format that works for all addresses</li>
+        <li>there’s no guarantee that users will use the fields the way you think they will</li>
+        <li>users can’t easily paste addresses from their clipboard</li>
+      </ul>
+
+      <h2 class="heading-medium">If you use multiple fields</h2>
+      <p>When using multiple fields, you should:</p>
+      <ul class="list list-bullet">
+        <li>avoid making individual fields mandatory (but warn users if they don’t fill in any fields)</li>
+        <li>make the fields the appropriate length for the content - it helps people understand the form (for example, make postcode fields shorter than street fields)</li>
+        <li>not make fields case sensitive (let people use upper or lower case)</li>
+        <li>write ‘postcode’ as one word</li>
+        <li>let people enter postcodes with or without spaces</li>
+      </ul>
+      <p>Royal Mail doesn’t need a county as long as the town and postcode are included, but you should include a county field so that people who don’t know their postcode can give a valid address.</p>
+
+
+
+      <!-- <h2>Patterns in this group</h2>
+      <ul>
+        <li><a href="#">Free text</a></li>
+        <li><a href="#">Multiple fields</a></li>
+        <li><a href="#">Address finder</a></li>
+        <li><a href="#">Displaying an address</a></li>
+        <li><a href="#">Finding an address</a></li>
+        <li><a href="#">Selecting an address</a></li>
+        <li><a href="#">Editing an address</a></li>
+      </ul> -->
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
