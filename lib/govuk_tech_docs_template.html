@@ -12,6 +12,14 @@
         <script src="{{ asset_path }}javascripts/tech-docs.js"></script>
         <script src="{{ asset_path }}javascripts/prism.js"></script>
         <script src="{{ asset_path }}javascripts/jquery-1.11.3.js"></script>
+        <script type="text/javascript">
+            $('ul.child_list').hide();
+
+            $('.parent_list > li').click(function () {
+                $('ul.child_list').hide();
+                $('ul.child_list', this).show();
+            });
+        </script>
     </head>
 
     <body>
