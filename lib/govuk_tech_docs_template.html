@@ -9,9 +9,9 @@
         <!--[if gt IE 8]><!-->
         <link href="{{ asset_path }}stylesheets/tech-docs.css" media="screen" rel="stylesheet"/>
         <!--<![endif]-->
+        <script src="{{ asset_path }}javascripts/jquery-1.11.3.js"></script>
         <script src="{{ asset_path }}javascripts/tech-docs.js"></script>
         <script src="{{ asset_path }}javascripts/prism.js"></script>
-        <script src="{{ asset_path }}javascripts/jquery-1.11.3.js"></script>
     </head>
 
     <body>
@@ -60,6 +60,16 @@
                 </div>
             </div>
         </div>
+        <!-- show/hide parent/child navigation items -->
+        <script type="text/javascript">
+            $('ul.child_list').hide();
+
+            $('.parent_list > li').click(function () {
+                console.log("moo");
+                $('ul.child_list').hide();
+                $('ul.child_list', this).show();
+            });
+        </script>
     </body>
 
 </html>
