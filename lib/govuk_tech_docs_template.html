@@ -70,6 +70,12 @@
                 $('ul.child_list', this).show();
             });
         </script>
+        <!-- resize iframes based on content -->
+        <script>
+            function resizeIframe(obj) {
+                obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+            }
+        </script>
     </body>
 
 </html>
