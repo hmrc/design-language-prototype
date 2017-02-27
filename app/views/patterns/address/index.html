@@ -4,33 +4,34 @@
   GOV.UK prototype kit
 {% endblock %}
 
+{% set currentSection = 'address' %}
+{% set currentPage = 'addressIndex' %}
+
 {% block content %}
 
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+  <main id="content" role="main">
+    <div class="grid-row">
+      <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        Address
-      </h1>
-      <p>
-        [Introductory content telling people about the address pattern]
-      </p>
+        <h1 class="heading-xlarge">
+          Address
+        </h1>
+        <p>
+          [Introductory content telling people about the address pattern]
+        </p>
 
-      <h2 class="heading-medium">Patterns in this group</h2>
-      <ul class="list list-bullet">
-        <li><a href="#">Free text</a></li>
-        <li><a href="#">Multiple fields</a></li>
-        <li><a href="#">Address finder</a></li>
-        <li><a href="#">Displaying an address</a></li>
-        <li><a href="#">Finding an address</a></li>
-        <li><a href="#">Selecting an address</a></li>
-        <li><a href="#">Editing an address</a></li>
-      </ul>
-
-
+        <h2 class="heading-medium">Patterns in this group</h2>
+        <ul class="list list-bullet">
+          <li><a href="#">Free text</a></li>
+          <li><a href="#">Multiple fields</a></li>
+          <li><a href="#">Address finder</a></li>
+          <li><a href="#">Displaying an address</a></li>
+          <li><a href="#">Finding an address</a></li>
+          <li><a href="#">Selecting an address</a></li>
+          <li><a href="#">Editing an address</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
-</main>
+  </main>
 
 {% endblock %}

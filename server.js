@@ -61,6 +61,11 @@ var nunjucksAppEnv = nunjucks.configure(appViews, {
 // Nunjucks filters
 utils.addNunjucksFilters(nunjucksAppEnv)
 
+// Nunjucks global
+nunjucksAppEnv.addGlobal('isSubMenu', function(currentSection) {
+  return Boolean(['address', 'header', 'footer'].indexOf(currentSection) >= 0)
+})
+
 // Set views engine
 app.set('view engine', 'html')
 

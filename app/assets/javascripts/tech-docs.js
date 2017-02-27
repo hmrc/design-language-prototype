@@ -285,7 +285,8 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
     var $toc;
 
     this.start = function ($element) {
-      var $closeLink = $element.find('.js-toc-close');
+
+/*      var $closeLink = $element.find('.js-toc-close');
       var $tocList = $element.find('.js-toc-list');
 
       $toc = $element;
@@ -295,7 +296,7 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
       // Need delegated handler for show link as sticky polyfill recreates element
       $html.on('click.toc', '.js-toc-show', preventingScrolling(openNavigation));
       $closeLink.on('click.toc', preventingScrolling(closeNavigation));
-      $tocList.on('click.toc', 'a', closeNavigation);
+      $tocList.on('click.toc', 'a', closeNavigation);*/
     };
 
     function fixRubberBandingInIOS() {
@@ -303,7 +304,7 @@ padding:"inner"+a,content:b,"":"outer"+a},function(c,d){n.fn[d]=function(d,e){va
       // scrolling in that direction will scroll the body 'behind' the table of
       // contents. Fix this by preventing ever reaching the top or bottom of the
       // table of contents (by 1 pixel).
-      // 
+      //
       // http://blog.christoffer.me/six-things-i-learnt-about-ios-safaris-rubber-band-scrolling/
       $toc.on("touchstart.toc", function () {
         var $this = $(this),
@@ -352,30 +353,17 @@ $(function() {
 
   $('.fixedsticky').fixedsticky();
 
-  // Hide sub-nav by default
-  $('.js-toc-list > ul > li > ul').hide();
-
-  // Show current section
-  $('.current-section > ul').show();
-
-  // Toggle subnav if it's clicked
-  $('.js-toc-list > ul > li > a').click(function(){
-
-    if($(this).siblings("ul").css('display') == 'block'){
-
-      $(this).siblings("ul").toggle('fast');
-
-    } else {
-      // Hide all navs
-      $('.js-toc-list > ul > li > ul').hide();
-
-      // Show this subnav
-      $(this).siblings("ul").toggle('fast');
-
-    }
-
-  });
 
 
 
+  var $menuSectionElems = $('.js-menu-section')
+
+  $menuSectionElems.click(function (event) {
+    event.preventDefault()
+
+    var subMenuSelector = $(this).attr('data-sub-menu')
+    var $subMenuElem = $('#' + subMenuSelector)
+
+    $subMenuElem.toggle()
+  })
 });

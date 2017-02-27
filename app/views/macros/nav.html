@@ -1,0 +1,94 @@
+{% macro nav(currentSection, currentPage) %}
+
+  {% macro highlightSection(currentPage, section) %}
+    {% if currentPage === section %}class="highlighted"{% endif %}
+  {% endmacro %}
+
+  <ul>
+    <li class="">
+      <a href="/">Introduction</a>
+    </li>
+    <li>
+      <hr>
+    </li>
+    <li class="">
+      <a href="#patterns" class="js-menu-section" data-sub-menu="patterns-sub-menu">Patterns</a>
+
+      <ul id="patterns-sub-menu" class="parent_list{% if not isSubMenu(currentSection) %} js-hidden{% endif %}">
+        <li>
+          <a href="/patterns/header" {{ highlightSection(currentPage, 'headerIndex') }}>Header</a>
+        </li>
+        <li>
+          <a href="/patterns/footer" {{ highlightSection(currentPage, 'footerIndex') }}>Footer</a>
+        </li>
+        <li>
+          <a href="/patterns/address" {{ highlightSection(currentPage, 'addressIndex') }}>Address</a>
+
+          {% if currentSection === 'address' %}
+
+            <ul class='child_list'>
+              <li>
+                <a href="/patterns/address/free-text.html" {{ highlightSection(currentPage, 'freeText') }}>Free text</a>
+              </li>
+              <li>
+                <a href="/patterns/address/multiple-fields.html" {{ highlightSection(currentPage, 'multipleFields') }}>Multiple
+                  fields</a>
+              </li>
+              <li>
+                <a href="/patterns/address/address-finder.html" {{ highlightSection(currentPage, 'addressFinder') }}>Address
+                  finder</a>
+              </li>
+              <li>
+                <a
+                  href="/patterns/address/displaying-an-address.html" {{ highlightSection(currentPage, 'displayingAnAddress') }}>Displaying
+                  an address</a>
+              </li>
+              <li>
+                <a
+                  href="/patterns/address/finding-an-address.html" {{ highlightSection(currentPage, 'findingAnAddress') }}>Finding
+                  an address</a>
+              </li>
+              <li>
+                <a
+                  href="/patterns/address/selecting-an-address.html" {{ highlightSection(currentPage, 'selectingAnAddress') }}>Selecting
+                  an address</a>
+              </li>
+              <li>
+                <a
+                  href="/patterns/address/editing-an-address.html" {{ highlightSection(currentPage, 'editingAnAddress') }}>Editing
+                  an address</a>
+              </li>
+            </ul>
+
+          {% endif %}
+        </li>
+      </ul>
+    </li>
+    <li>
+      <hr>
+    </li>
+    <li>
+      <a href="#" class="js-menu-section" data-sub-menu="components-sub-menu">Components</a>
+    </li>
+    <li>
+      <ul id="components-sub-menu" class="js-hidden">
+        <li>
+          <a href="#">Component name</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <hr>
+    </li>
+    <li>
+      <a href="#" class="js-menu-section" data-sub-menu="elements-sub-menu">Elements</a>
+    </li>
+    <li>
+      <ul id="elements-sub-menu" class="js-hidden">
+        <li>
+          <a href="#">Button</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+{% endmacro %}
