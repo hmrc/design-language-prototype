@@ -360,9 +360,16 @@ $(function() {
 
   $menuSectionElems.click(function (event) {
     event.preventDefault()
-
+    var currentElem = event.target
     var subMenuSelector = $(this).attr('data-sub-menu')
     var $subMenuElem = $('#' + subMenuSelector)
+
+    // hide all sub menus bar the current one
+    $menuSectionElems.each(function(i, elem) {
+      if (elem !== currentElem) {
+        $('#' + elem.getAttribute('data-sub-menu')).hide()
+      }
+    })
 
     $subMenuElem.toggle()
   })
