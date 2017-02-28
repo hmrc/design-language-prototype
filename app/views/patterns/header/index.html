@@ -1,43 +1,45 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% set currentSection = 'header' %} {% set currentPage = 'headerIndex' %} {% block content %}
 
-{% block page_title %}
-    GOV.UK prototype kit
-{% endblock %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
 
-{% set currentSection = 'header' %}
-{% set currentPage = 'headerIndex' %}
+      <h1 class="heading-xlarge">
+        <span class="heading-secondary">Patterns</span>
+        Header
+      </h1>
 
-{% block content %}
+      <h2 class="heading-medium">When to use this pattern</h2>
+      <p>This pattern should be used on all service pages.</p>
 
-    <main id="content" role="main">
-        <div class="grid-row">
-            <div class="column-two-thirds">
+      <h3 class="heading-small">Example</h3>
+      <!-- <div class="example width-150"> -->
+      <iframe class="width-150" frameborder="0" scrolling="no" style="height: 106px;" id="desktop" src="/patterns/header/govuk_complete_header_partial.html"></iframe>
+      <!-- </div> -->
+      <p>
+        <a href="/docs/examples/blank-govuk.html">View the header in a page</a>
+      </p>
 
-                <h1 class="heading-xlarge">
-                    Header
-                </h1>
-                <p>
-                    Discuss this pattern on
-                    <a href="https://github.com/hmrc/design-language-documentation/issues/4">GitHub</a>
-                </p>
+      <p>
+        Discuss this pattern on
+        <a href="https://github.com/hmrc/design-language-documentation/issues/4">GitHub</a>
+      </p>
 
-                <p></p>
+      <h2 class="heading-medium">The GOV.UK header is made up of three sub-patterns or components:</h2>
+      <ul class="list list-bullet">
+        <li>
+          <a href="#">GOV.UK Header</a>
+        </li>
+        <li>
+          <a href="#">Phase banner</a>
+        </li>
+        <li>
+          <a href="#">Department banner</a>
+        </li>
+      </ul>
 
-                <h2 class="heading-medium">The GOV.UK header is made up of three sub-patterns or components:</h2>
-                <ul class="list list-bullet">
-                    <li>
-                        <a href="#">GOV.UK Header</a>
-                    </li>
-                    <li>
-                        <a href="#">Phase banner</a>
-                    </li>
-                    <li>
-                        <a href="#">Department banner</a>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-    </main>
+    </div>
+  </div>
+</main>
 
 {% endblock %}
