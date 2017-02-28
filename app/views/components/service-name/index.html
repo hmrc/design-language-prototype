@@ -1,0 +1,128 @@
+{% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% set currentSection = 'components' %} {% set currentPage = 'govUkHeaderBanner' %} {% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-xlarge">
+        <span class="heading-secondary">Components</span>
+        Service name
+      </h1>
+
+      <h2 class="heading-medium">When to use this compnent</h2>
+      <p>Every service should have a name.</p>
+
+      <!-- /patterns/header/govuk_header_partial -->
+      <h3 class="heading-small">Example</h3>
+      <!-- <div class="example width-150"> -->
+      <iframe class="width-150" frameborder="0" scrolling="no" style="height: 63px;" id="desktop" src="/patterns/header/govuk_header_partial.html"></iframe>
+
+      <h2 class="heading-medium">How to use this compoent</h2>
+      <div class="govuk-govspeak">
+        <p>The name you choose for your service is important to its success.</p>
+
+        <p>Picking the right name means that users can:</p>
+
+        <ul class="list list-bullet">
+          <li>find your service more easily when they search online</li>
+          <li>understand what your service does and easily decide whether to use it</li>
+        </ul>
+
+        <h2 class="heading-medium">Meeting the Digital Service Standard</h2>
+
+        <p>To pass <a href="/service-manual/service-standard/understand-user-needs">point 1 (understand user needs)</a> in your <a href="/service-manual/service-assessments/check-if-you-need-a-service-assessment">service assessments</a>, you must explain
+          how you named your service.</p>
+
+        <h2 class="heading-medium">When to name your service</h2>
+
+        <p>You should try to name your service by the end of the discovery phase. By this stage you should have</p>
+
+        <ul class="list list-bullet">
+          <li>defined the problem you’re trying to solve</li>
+          <li>learned more about the context of the task your users are trying to do</li>
+        </ul>
+
+        <h2 class="heading-medium">How to name your service</h2>
+
+        <p>Good service names:</p>
+
+        <ul class="list list-bullet">
+          <li>use the words users use</li>
+          <li>are based on analytics and user research</li>
+          <li>describe a task, not a technology</li>
+          <li>don’t need to change when policy or technology changes</li>
+          <li><a rel="external" href="https://designnotes.blog.gov.uk/2015/06/22/good-services-are-verbs-2/">are verbs, not nouns</a></li>
+          <li>don’t include government department or agency names</li>
+          <li>aren’t brand-driven or focused on marketing</li>
+        </ul>
+
+        <h3 class="heading-small">Problems with naming your service</h3>
+
+        <p>If you’re having problems naming your service, it might be because you haven’t scoped your service correctly. In this case, you should review your <a href="/service-manual/user-research/start-by-learning-user-needs">user needs</a> and carry out
+          <a href="/service-manual/user-research">user research</a> on the task that users are trying to do.</p>
+
+        <p>You might want to expand or reduce the scope of your service if it covers several related services (for example, if it’s a tax or grant service).</p>
+
+        <h2 class="heading-medium">Examples of service names</h2>
+
+        <p>You can use these service names as good examples:</p>
+
+        <ul class="list list-bullet">
+          <li>Register to vote</li>
+          <li>Get help with court fees</li>
+          <li>Renew your passport</li>
+          <li>Find an apprenticeship</li>
+        </ul>
+
+        <h3 class="heading-small">The Register to vote service</h3>
+
+        <p>Before the Register to vote service was created, it was known internally as Individual Electoral Registration System.</p>
+
+        <h3 class="heading-small">The Get help with court fees service</h3>
+
+        <p>The Get help with court fees service was originally called Fee remission.</p>
+
+        <p>After doing research with users and court staff, the service team found the name was confusing people. This made the service harder for users to understand and more expensive to deliver.</p>
+
+        <h2 class="heading-medium">Check how the name is performing</h2>
+
+        <p>You should check how your service’s name performs both before and after going live.</p>
+
+        <h3 class="heading-small">Use research and testing</h3>
+
+        <p>You should use research and testing to check that the name of your service allows users to quickly recognise what it does.</p>
+
+        <p>You can use <a rel="external" href="https://en.wikipedia.org/wiki/Tree_testing">tree testing</a> to see if users can:</p>
+
+        <ul class="list list-bullet">
+          <li>navigate from a home page to your service</li>
+          <li>distinguish your service from other related services</li>
+        </ul>
+
+        <h3 class="heading-small">Review search terms</h3>
+
+        <p>You should check search data to find out what terms users search for that relate to your service.</p>
+
+        <p>You can also ask the <a href="https://www.gov.uk/service-manual/communities/user-research-community">user research community</a> for help. They may be able to share research which helps you categorise your service and use the right words to name
+          it.
+        </p>
+
+        <h3 class="heading-small">Using metrics</h3>
+
+        <p>You can review metrics to get an idea of how a service name is performing. For example, you can check:</p>
+
+        <ul class="list list-bullet">
+          <li>page views from organic search</li>
+          <li>click-through rate to a ‘start’ button</li>
+          <li>external search volumes for the old and new name</li>
+          <li>reduced number of on-page searches about the service</li>
+          <li>number of users calling to ask ‘How do I… ?’</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
