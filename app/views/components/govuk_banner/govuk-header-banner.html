@@ -1,30 +1,24 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% set currentSection = 'components' %} {% set currentPage = 'govUkHeaderBanner' %} {% block content %}
 
-{% block page_title %}
-    GOV.UK prototype kit
-{% endblock %}
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
 
-{% set currentSection = 'components' %}
-{% set currentPage = 'govUkHeaderBanner' %}
+      <h1 class="heading-xlarge">
+          <span class="heading-secondary">Components</span>
+          GOV.UK Banner
+      </h1>
 
-{% block content %}
+      <h2 class="heading-medium">When to use this compnent</h2>
+      <p>Every service should have a GOV.UK banner.</p>
 
-    <main id="content" role="main">
-        <div class="grid-row">
-            <div class="column-two-thirds">
-
-                <h1 class="heading-xlarge">
-                    <span class="heading-secondary">Components</span>
-                    GOV.UK Banner
-                </h1>
-
-                <!-- /patterns/header/govuk_header_partial -->
-                <h3 class="heading-small">Example</h3>
-                <!-- <div class="example width-150"> -->
-                <iframe class="width-150" frameborder="0" scrolling="no" onload="resizeIframe(this)" id="desktop" src="/components/govuk_banner/partial.html"></iframe>
-                <!-- TODO: there is a grey bar showing in the iframe for this that's part of the footer this needs to be removed -->
-                <!-- </div> -->
-                <!--
+      <!-- /patterns/header/govuk_header_partial -->
+      <h3 class="heading-small">Example</h3>
+      <!-- <div class="example width-150"> -->
+      <iframe class="width-150" frameborder="0" scrolling="no" style="height: 54px;" id="desktop" src="/components/govuk_banner/partial.html"></iframe>
+      <!-- TODO: there is a grey bar showing in the iframe for this that's part of the footer this needs to be removed -->
+      <!-- </div> -->
+      <!--
                 <h2 class="heading-medium">Components used in this pattern</h2>
                 <ul class="list list-bullet">
                     <li>Banner</li>
@@ -38,8 +32,8 @@
                     <a href="https://github.com/hmrc/design-language-documentation/issues/4">GitHub</a>
                 </p> -->
 
-            </div>
-        </div>
-    </main>
+    </div>
+  </div>
+</main>
 
 {% endblock %}
