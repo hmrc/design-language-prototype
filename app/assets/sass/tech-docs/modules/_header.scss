@@ -94,7 +94,12 @@ $active-nav-color: #1d8feb;
 
 .header__brand {
   font-size: 30px;
-  
+
+  img{
+    margin: 2px 1px 0 0;
+    vertical-align: top;
+  }
+
   // Give brand focus outline on mobile
   &:after {
     content: ".";
@@ -244,7 +249,7 @@ $active-nav-color: #1d8feb;
 .js {
   .header__navigation {
     display: none;
-    
+
     @include media(tablet) {
       display: block;
     }
