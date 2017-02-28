@@ -1,139 +1,129 @@
-{% macro nav(currentSection, currentPage) %}
-  {% macro highlightSection(currentPage, section) %}
-    {# add 'highlighted' class if currentPage matches section #}
-    {% if currentPage === section %}class="highlighted"{% endif %}
-  {% endmacro %}
-  {% macro hideSubMenu(currentSection, expectedSections) %}
-    {# add 'js-hidden' to hide the subMenu if the currentSection is not in the expectSections array #}
-    {% if not inArray(currentSection, expectedSections) %}
-      js-hidden{% endif %}
-  {% endmacro %}
-  <ul>
-    {# Intro section #}
-    <li>
-      <a href="/">Introduction</a>
-    </li>
-    {# END Intro section #}
-    {# Templates section #}
-    <li>
-      <a href="#" class="js-menu-section" data-sub-menu="templates-sub-menu">Templates</a>
-      <ul id="templates-sub-menu" class="parent_list{{ hideSubMenu(currentSection, ['templates']) }}">
-        <li>
-          <a href="/templates/basic.html" {{ highlightSection(currentPage, 'basic') }}>Basic Page</a>
-        </li>
-      </ul>
-    </li>
-    {# END Templates section #}
-    {# Patterns section #}
-    <li>
-      <a href="#patterns" class="js-menu-section" data-sub-menu="patterns-sub-menu">Patterns</a>
-      {# Patterns sub menu section #}
-      <ul id="patterns-sub-menu" class="parent_list {{ hideSubMenu(currentSection, [
+{% macro nav(currentSection, currentPage) %} {% macro highlightSection(currentPage, section) %} {# add 'highlighted' class if currentPage matches section #} {% if currentPage === section %}class="highlighted"{% endif %} {% endmacro %} {% macro hideSubMenu(currentSection,
+expectedSections) %} {# add 'js-hidden' to hide the subMenu if the currentSection is not in the expectSections array #} {% if not inArray(currentSection, expectedSections) %} js-hidden{% endif %} {% endmacro %}
+<ul>
+  {# Intro section #}
+  <li>
+    <a href="/">Introduction</a>
+  </li>
+  {# END Intro section #} {# Templates section #}
+  <li>
+    <a href="#" class="js-menu-section" data-sub-menu="templates-sub-menu">Templates</a>
+    <ul id="templates-sub-menu" class="parent_list{{ hideSubMenu(currentSection, ['templates']) }}">
+      <li>
+        <a href="/templates/basic.html" {{ highlightSection(currentPage, 'basic') }}>Basic Page</a>
+      </li>
+    </ul>
+  </li>
+  {# END Templates section #} {# Patterns section #}
+  <li>
+    <a href="#patterns" class="js-menu-section" data-sub-menu="patterns-sub-menu">Patterns</a> {# Patterns sub menu section #}
+    <ul id="patterns-sub-menu" class="parent_list {{ hideSubMenu(currentSection, [
   'address', 'header', 'footer'
   ]) }}">
-        <li>
-          <a href="/patterns/header/" {{ highlightSection(currentPage, 'govUkHeader') }}>
+      <li>
+        <a href="/patterns/header/" {{ highlightSection(currentPage, 'govUkHeader') }}>
             Header
           </a>
-          <ul>
-            <li>
-              <a href="/patterns/header/govuk-header.html">GOV.UK</a>
-            </li>
-            <li>
-              <a href="/patterns/header/phase-banner.html">Phase banner</a>
-            </li>
-            <li>
-              <a href="/patterns/header/hmrc-header.html">HMRC</a>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <a href="/patterns/footer/govuk-footer.html" {{ highlightSection(currentPage, 'govUkFooter') }}>
+        <ul>
+          <li>
+            <a href="/patterns/header/govuk-header.html">GOV.UK</a>
+          </li>
+          <li>
+            <a href="/patterns/header/phase-banner.html">Phase banner</a>
+          </li>
+          <li>
+            <a href="/patterns/header/hmrc-header.html">HMRC</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/patterns/footer/" {{ highlightSection(currentPage, 'govUkFooter') }}>
             Footer
           </a>
-        </li>
-        <li>
-          <a href="/patterns/address" {{ highlightSection(currentPage, 'addressIndex') }}>
+        <ul>
+          <li>
+            <a href="/patterns/footer/govuk-footer.html">GOV.UK</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="/patterns/address" {{ highlightSection(currentPage, 'addressIndex') }}>
             Address
-          </a>
-          {# Address sub menu section #}
-          {% if currentSection === 'address' %}
-            <ul class='child_list'>
-              <li>
-                <a href="/patterns/address/free-text.html" {{ highlightSection(currentPage, 'freeText') }}>
+          </a> {# Address sub menu section #} {% if currentSection === 'address' %}
+        <ul class='child_list'>
+          <li>
+            <a href="/patterns/address/free-text.html" {{ highlightSection(currentPage, 'freeText') }}>
                   Free text
                 </a>
-              </li>
-              <li>
-                <a href="/patterns/address/multiple-fields.html" {{ highlightSection(currentPage, 'multipleFields') }}>
+          </li>
+          <li>
+            <a href="/patterns/address/multiple-fields.html" {{ highlightSection(currentPage, 'multipleFields') }}>
                   Multiple fields
                 </a>
-              </li>
-              <li>
-                <a href="/patterns/address/address-finder.html" {{ highlightSection(currentPage, 'addressFinder') }}>
+          </li>
+          <li>
+            <a href="/patterns/address/address-finder.html" {{ highlightSection(currentPage, 'addressFinder') }}>
                   Address finder
                 </a>
-              </li>
-              <li>
-                <a href="/patterns/address/displaying-an-address.html" {{ highlightSection(currentPage, 'displayingAnAddress') }}>
+          </li>
+          <li>
+            <a href="/patterns/address/displaying-an-address.html" {{ highlightSection(currentPage, 'displayingAnAddress') }}>
                   Displaying an address
                 </a>
-              </li>
-              <li>
-                <a href="/patterns/address/finding-an-address.html" {{ highlightSection(currentPage, 'findingAnAddress') }}>
+          </li>
+          <li>
+            <a href="/patterns/address/finding-an-address.html" {{ highlightSection(currentPage, 'findingAnAddress') }}>
                   Finding an address
                 </a>
-              </li>
-              <li>
-                <a href="/patterns/address/selecting-an-address.html" {{ highlightSection(currentPage, 'selectingAnAddress') }}>
+          </li>
+          <li>
+            <a href="/patterns/address/selecting-an-address.html" {{ highlightSection(currentPage, 'selectingAnAddress') }}>
                   Selecting an address
                 </a>
-              </li>
-              <li>
-                <a href="/patterns/address/editing-an-address.html" {{ highlightSection(currentPage, 'editingAnAddress') }}>
+          </li>
+          <li>
+            <a href="/patterns/address/editing-an-address.html" {{ highlightSection(currentPage, 'editingAnAddress') }}>
                   Editing an address
                 </a>
-              </li>
-            </ul>
-          {% endif %}
-          {# END Address sub menu section #}
-        </li>
-      </ul>
-      {# END Patterns sub menu section #}
-    </li>
-    <li>
-      <hr>
-    </li>
-    {# Components section #}
-    <li>
-      <a href="#components" class="js-menu-section" data-sub-menu="components-sub-menu">Components</a>
-      {# Components sub menu section #}
-      <ul id="components-sub-menu" class="child_list {{ hideSubMenu(currentSection, ['components']) }}">
-        <li>
-          <a href="/components/govuk_banner/govuk-header-banner.html" {{ highlightSection(currentPage, 'govUkHeaderBanner') }}>
+          </li>
+        </ul>
+        {% endif %} {# END Address sub menu section #}
+      </li>
+    </ul>
+    {# END Patterns sub menu section #}
+  </li>
+  <li>
+    <hr>
+  </li>
+  {# Components section #}
+  <li>
+    <a href="#components" class="js-menu-section" data-sub-menu="components-sub-menu">Components</a> {# Components sub menu section #}
+    <ul id="components-sub-menu" class="child_list {{ hideSubMenu(currentSection, ['components']) }}">
+      <li>
+        <a href="/components/govuk_banner/govuk-header-banner.html" {{ highlightSection(currentPage, 'govUkHeaderBanner') }}>
             GOV.UK banner
           </a>
-        </li>
-      </ul>
-      {# END Components sub menu section #}
-    </li>
-    {# END Components section #}
-    <li>
-      <hr>
-    </li>
-    {# Elements section #}
-    <li>
-      <a href="#elements" class="js-menu-section" data-sub-menu="elements-sub-menu">
+      </li>
+    </ul>
+    {# END Components sub menu section #}
+  </li>
+  {# END Components section #}
+  <li>
+    <hr>
+  </li>
+  {# Elements section #}
+  <li>
+    <a href="#elements" class="js-menu-section" data-sub-menu="elements-sub-menu">
         Elements
       </a>
-    </li>
-    <li>
-      <ul id="elements-sub-menu" class="{{ hideSubMenu(currentSection, ['elements']) }}">
-        <li>
-          <a href="#">Button</a>
-        </li>
-      </ul>
-    </li>
-    {# END Elements section #}
-  </ul>
+  </li>
+  <li>
+    <ul id="elements-sub-menu" class="{{ hideSubMenu(currentSection, ['elements']) }}">
+      <li>
+        <a href="#">Button</a>
+      </li>
+    </ul>
+  </li>
+  {# END Elements section #}
+</ul>
 {% endmacro %}
