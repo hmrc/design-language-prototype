@@ -1,28 +1,19 @@
 {% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% set currentSection = 'header' %} {% set currentPage = 'govUkFooter' %} {% block content %}
 
-<main id="content" role="main">
   <div class="grid-row">
-    <div class="column-two-thirds">
+    <div class="column-full">
 
       <h1 class="heading-xlarge">
-          <span class="heading-secondary">Footer</span>
-          GOV.UK
-        </h1>
+        <span class="heading-secondary">Footer</span>
+        GOV.UK
+      </h1>
 
       <h2 class="heading-medium">When to use this pattern</h2>
       <p>The footer should be included on all pages in your service.</p>
-
-      <!-- <a href="/docs/examples/blank-govuk.html">View the header in a page</a>
-                <a href="/patterns/header/govuk_header_partial.html">header partial</a> -->
-
       <!-- /patterns/header/govuk_header_partial -->
       <h2 class="heading-medium">Example</h2>
-      <!-- <div class="example width-150"> -->
-      <iframe class="width-150" frameborder="0" scrolling="no" onload="resizeIframe(this)" id="desktop" src="/patterns/footer/govuk_footer_partial.html"></iframe>
-      <!-- </div> -->
-
+      {{ iframe('/patterns/footer/govuk_footer_partial.html') }}
       <hr>
-
       <p>
         Discuss this pattern on
         <a href="https://github.com/hmrc/design-language-documentation/issues/4">GitHub</a>
@@ -30,6 +21,5 @@
 
     </div>
   </div>
-</main>
 
 {% endblock %}
