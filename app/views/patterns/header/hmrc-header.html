@@ -1,22 +1,18 @@
 {% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% set currentSection = 'header' %} {% set currentPage = 'govUkHeader' %} {% block content %}
 
-<main id="content" role="main">
   <div class="grid-row">
-    <div class="column-two-thirds">
-
+    <div class="column-full">
       <h1 class="heading-xlarge">
-          <span class="heading-secondary">Header</span>
-          HMRC
-        </h1>
+        <span class="heading-secondary">Header</span>
+        HMRC
+      </h1>
 
       <h2 class="heading-medium">When to use this pattern</h2>
       <p>This pattern should be used on all service pages.</p>
 
       <!-- /patterns/header/govuk_header_partial -->
       <h3 class="heading-small">Example</h3>
-      <!-- <div class="example width-150"> -->
-      <iframe class="width-150" frameborder="0" scrolling="no" onload="resizeIframe(this)" id="desktop" src="/patterns/header/govuk_header_partial.html"></iframe>
-      <!-- </div> -->
+      {{ iframe('/patterns/header/alpha_banner_partial.html') }}
       <p>
         <a href="/docs/examples/blank-govuk.html">View the header in a page</a>
       </p>
@@ -34,9 +30,6 @@
         Discuss this pattern on
         <a href="https://github.com/hmrc/design-language-documentation/issues/4">GitHub</a>
       </p>
-
     </div>
   </div>
-</main>
-
 {% endblock %}
