@@ -1,42 +1,47 @@
-{% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% set currentSection = 'header' %} {% set currentPage = 'govUkHeader' %} {% block content %}
+{% extends "layout.html" %}
 
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+{% block page_title %}
+    GOV.UK prototype kit
+{% endblock %}
 
-      <h1 class="heading-xlarge">
-          <span class="heading-secondary">Header</span>
-          GOV.UK header
-        </h1>
+{% block content %}
 
-      <h2 class="heading-medium">When to use this pattern</h2>
-      <p>This pattern should be used on all service pages.</p>
+    <main id="content" role="main">
+        <div class="grid-row">
+            <div class="column-two-thirds">
 
-      <!-- /patterns/header/govuk_header_partial -->
-      <h3 class="heading-small">Example</h3>
-      <!-- <div class="example width-150"> -->
-      <iframe class="width-150" frameborder="0" scrolling="no" style="height: 60px;" id="desktop" src="/patterns/header/govuk_header_partial.html"></iframe>
-      <!-- </div> -->
-      <p>
-        <a href="/docs/examples/blank-govuk.html">View the header in a page</a>
-      </p>
+                <h1 class="heading-xlarge">
+                    GOV.UK header
+                </h1>
 
-      <!-- <h2 class="heading-medium">Components used in this pattern</h2>
-      <ul class="list list-bullet">
-        <li>
-          <a href="/components/govuk_banner/govuk-header-banner.html">Banner</a>
-        </li>
-        <li>Service name</li>
-        <li>Blue bar</li>
-      </ul> -->
-      <hr>
-      <p>
-        Discuss this pattern on
-        <a href="https://github.com/hmrc/design-language-documentation/issues/4">GitHub</a>
-      </p>
+                <h2 class="heading-medium">When to use this pattern</h2>
+                <p>This pattern should be used on all service pages.</p>
 
-    </div>
-  </div>
-</main>
+                <!-- /patterns/header/govuk_header_partial -->
+                <h3 class="heading-small">Example</h3>
+                <!-- <div class="example width-150"> -->
+                <iframe class="width-150" frameborder="0" scrolling="no" onload="resizeIframe(this)" id="desktop" src="/patterns/header/govuk_header_partial.html"></iframe>
+                <!-- </div> -->
+                <p>
+                    <a href="/docs/examples/blank-govuk.html">View the header in a page</a>
+                </p>
+
+                <h2 class="heading-medium">Components used in this pattern</h2>
+                <ul class="list list-bullet">
+                    <li>
+                        <a href="/components/govuk_banner/govuk-header-banner.html">Banner</a>
+                    </li>
+                    <li>Service name</li>
+                    <li>Blue bar</li>
+                </ul>
+                <hr>
+                <p>
+                    Discuss this pattern on
+                    <a href="https://github.com/hmrc/design-language-documentation/issues/4">GitHub</a>
+                </p>
+
+            </div>
+        </div>
+    </main>
 
 {% endblock %}
