@@ -1,6 +1,6 @@
 {% macro nav(currentSection, currentPage) %}
 
-  {% macro highlightSection(currentPage, section) %}
+  {% macro highlight(currentPage, section) %}
     {# add 'highlighted' class if currentPage matches section #}
     {% if currentPage === section %}class="highlighted"{% endif %}
   {% endmacro %}
@@ -20,7 +20,7 @@
       <a href="#" class="js-menu-section" data-sub-menu="templates-sub-menu">Templates</a>
       <ul id="templates-sub-menu" class="parent_list{{ showSubMenu(currentSection, ['templates']) }}">
         <li>
-          <a href="/templates/basic.html" {{ highlightSection(currentPage, 'basic') }}>Basic Page</a>
+          <a href="/templates/basic.html" {{ highlight(currentPage, 'basic') }}>Basic Page</a>
         </li>
       </ul>
     </li>
@@ -32,82 +32,82 @@
       'address', 'header', 'footer'
       ]) }}">
         <li>
-          <a href="/patterns/header/" {{ highlightSection(currentPage, 'header-index') }}>
+          <a href="/patterns/header/" {{ highlight(currentPage, 'header-index') }}>
             Header
           </a>
           {# Header sub menu section #}
           {% if currentSection === 'header' %}
           <ul>
             <li>
-              <a href="/patterns/header/govuk-header.html" {{ highlightSection(currentPage, 'govuk-header') }}>GOV.UK</a>
+              <a href="/patterns/header/govuk-header.html" {{ highlight(currentPage, 'govuk-header') }}>GOV.UK</a>
             </li>
             <li>
-              <a href="/patterns/header/phase-banner.html" {{ highlightSection(currentPage, 'phase-banner') }}>Phase banner</a>
+              <a href="/patterns/header/phase-banner.html" {{ highlight(currentPage, 'phase-banner') }}>Phase banner</a>
             </li>
             <li>
-              <a href="/patterns/header/hmrc-header.html" {{ highlightSection(currentPage, 'hmrc-header') }}>HMRC</a>
+              <a href="/patterns/header/hmrc-header.html" {{ highlight(currentPage, 'hmrc-header') }}>HMRC</a>
             </li>
           </ul>
           {% endif %}
           {# END - Header sub menu section #}
         </li>
         <li>
-          <a href="/patterns/footer/" {{ highlightSection(currentPage, 'footer-index') }}>
+          <a href="/patterns/footer/" {{ highlight(currentPage, 'footer-index') }}>
             Footer
           </a>
           {# Footer sub menu section #}
           {% if currentSection === 'footer' %}
           <ul>
             <li>
-              <a href="/patterns/footer/govuk-footer.html" {{ highlightSection(currentPage, 'govuk-footer') }}>GOV.UK</a>
+              <a href="/patterns/footer/govuk-footer.html" {{ highlight(currentPage, 'govuk-footer') }}>GOV.UK</a>
             </li>
           </ul>
           {% endif %}
           {# END - Footer sub menu section #}
         </li>
         <li>
-          <a href="/patterns/address" {{ highlightSection(currentPage, 'address-index') }}>
+          <a href="/patterns/address" {{ highlight(currentPage, 'address-index') }}>
             Address
           </a>
           {# Address sub menu section #}
           {% if currentSection === 'address' %}
             <ul class='child_list'>
               <li>
-                <a href="/patterns/address/free-text.html" {{ highlightSection(currentPage, 'freeText') }}>
+                <a href="/patterns/address/free-text.html" {{ highlight(currentPage, 'freeText') }}>
                   Free text
                 </a>
               </li>
               <li>
-                <a href="/patterns/address/multiple-fields.html" {{ highlightSection(currentPage, 'multipleFields') }}>
+                <a href="/patterns/address/multiple-fields.html" {{ highlight(currentPage, 'multipleFields') }}>
                   Multiple fields
                 </a>
               </li>
               <li>
-                <a href="/patterns/address/address-finder.html" {{ highlightSection(currentPage, 'addressFinder') }}>
+                <a href="/patterns/address/address-finder.html" {{ highlight(currentPage, 'addressFinder') }}>
                   Address finder
                 </a>
               </li>
               <li>
                 <a
-                  href="/patterns/address/displaying-an-address.html" {{ highlightSection(currentPage, 'displayingAnAddress') }}>
+                  href="/patterns/address/displaying-an-address.html" {{ highlight(currentPage, 'displayingAnAddress') }}>
                   Displaying an address
                 </a>
               </li>
               <li>
                 <a
-                  href="/patterns/address/finding-an-address.html" {{ highlightSection(currentPage, 'findingAnAddress') }}>
+                  href="/patterns/address/finding-an-address.html" {{ highlight(currentPage, 'findingAnAddress') }}>
                   Finding an address
                 </a>
               </li>
               <li>
                 <a
-                  href="/patterns/address/selecting-an-address.html" {{ highlightSection(currentPage, 'selectingAnAddress') }}>
+                  href="/patterns/address/selecting-an-address.html" {{ highlight(currentPage, 'selectingAnAddress') }}>
                   Selecting an address
                 </a>
               </li>
               <li>
                 <a
-                  href="/patterns/address/editing-an-address.html" {{ highlightSection(currentPage, 'editingAnAddress') }}>
+                  href="/patterns/address/editing-an-address.html" {{ highlight(currentPage, 'editingAnAddress') }}>
                   Editing an address
                 </a>
               </li>
@@ -130,11 +130,11 @@
       ]) }}">
         <li>
           <a
-            href="/components/govuk-banner" {{ highlightSection(currentPage, 'govuk-banner-index') }}>
+            href="/components/govuk-banner" {{ highlight(currentPage, 'govuk-banner-index') }}>
             GOV.UK banner
           </a>
         </li>
-        <li><a href="/components/service-name" {{ highlightSection(currentPage, 'service-name-index') }}>Service name</a></li>
+        <li><a href="/components/service-name" {{ highlight(currentPage, 'service-name-index') }}>Service name</a></li>
       </ul>
       {# END Components sub menu section #}
     </li>
