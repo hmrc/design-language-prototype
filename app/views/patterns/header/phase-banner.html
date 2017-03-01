@@ -1,35 +1,33 @@
 {% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% set currentSection = 'header' %} {% set currentPage = 'govUkHeader' %} {% block content %}
 
-<main id="content" role="main">
-  <div class="grid-row">
-    <div class="column-two-thirds">
+<div class="grid-row">
+  <div class="column-full">
 
-      <h1 class="heading-xlarge">
-          <span class="heading-secondary">Header</span>
-          Phase banner
-        </h1>
+    <h1 class="heading-xlarge">
+      <span class="heading-secondary">Header</span>
+      Phase banner
+    </h1>
 
-      <h2 class="heading-medium">When to use this pattern</h2>
-      <p>This pattern should be used on all service pages unless the service has passed it's live assessment.</p>
+    <h2 class="heading-medium">When to use this pattern</h2>
+    <p>This pattern should be used on all service pages unless the service has passed it's live assessment.</p>
 
-      <!-- /patterns/header/govuk_header_partial -->
-      <h3 class="heading-small">Examples</h3>
-      <!-- <div class="example width-150"> -->
+    <h3 class="heading-small">Examples</h3>
 
-      <h4>Alpha banner</h4>
-      <iframe class="width-150" frameborder="0" scrolling="no" style="height: 43px;" id="desktop" src="/patterns/header/alpha_banner_partial.html"></iframe>
-
-      <h4>Beta banner</h4>
-      <iframe class="width-150" frameborder="0" scrolling="no" style="height: 43px;" id="desktop" src="/patterns/header/beta_banner_partial.html"></iframe>
-
-      <hr>
-      <p>
-        Discuss this pattern on
-        <a href="https://github.com/hmrc/design-language-documentation/issues/4">GitHub</a>
-      </p>
-
+    <h4>Alpha banner</h4>
+    <div class="example">
+      <iframe frameborder="0" scrolling="no" id="desktop" onload="resizeIframe(this, 100)" src="/patterns/header/alpha_banner_partial.html"></iframe>
     </div>
+    <h4>Beta banner</h4>
+    <div class="example">
+      <iframe frameborder="0" scrolling="no" id="desktop" onload="resizeIframe(this)" src="/patterns/header/beta_banner_partial.html"></iframe>
+    </div>
+    <hr>
+    <p>
+      Discuss this pattern on
+      <a href="https://github.com/hmrc/design-language-documentation/issues/4">GitHub</a>
+    </p>
+
   </div>
-</main>
+</div>
 
 {% endblock %}
