@@ -5,7 +5,7 @@
     {% if currentPage === section %}class="highlighted"{% endif %}
   {% endmacro %}
 
-  {% macro hideSubMenu(currentSection, expectedSections) %}
+  {% macro showSubMenu(currentSection, expectedSections) %}
     {# add 'js-hidden' to hide the subMenu if the currentSection is not in the expectSections array #}
     {% if not inArray(currentSection, expectedSections) %} js-hidden{% endif %}
   {% endmacro %}
@@ -18,7 +18,7 @@
     {# END Intro section #} {# Templates section #}
     <li>
       <a href="#" class="js-menu-section" data-sub-menu="templates-sub-menu">Templates</a>
-      <ul id="templates-sub-menu" class="parent_list{{ hideSubMenu(currentSection, ['templates']) }}">
+      <ul id="templates-sub-menu" class="parent_list{{ showSubMenu(currentSection, ['templates']) }}">
         <li>
           <a href="/templates/basic.html" {{ highlightSection(currentPage, 'basic') }}>Basic Page</a>
         </li>
@@ -28,7 +28,7 @@
     <li>
       <a href="#patterns" class="js-menu-section"
          data-sub-menu="patterns-sub-menu">Patterns</a> {# Patterns sub menu section #}
-      <ul id="patterns-sub-menu" class="parent_list {{ hideSubMenu(currentSection, [
+      <ul id="patterns-sub-menu" class="parent_list {{ showSubMenu(currentSection, [
       'address', 'header', 'footer'
       ]) }}">
         <li>
@@ -125,7 +125,7 @@
     <li>
       <a href="#components" class="js-menu-section"
          data-sub-menu="components-sub-menu">Components</a> {# Components sub menu section #}
-      <ul id="components-sub-menu" class="child_list {{ hideSubMenu(currentSection, [
+      <ul id="components-sub-menu" class="child_list {{ showSubMenu(currentSection, [
       'govuk-banner', 'service-name'
       ]) }}">
         <li>
@@ -149,7 +149,7 @@
       </a>
     </li>
     <li>
-      <ul id="elements-sub-menu" class="{{ hideSubMenu(currentSection, ['elements']) }}">
+      <ul id="elements-sub-menu" class="{{ showSubMenu(currentSection, ['elements']) }}">
         <li>
           <a href="#">Button</a>
         </li>
