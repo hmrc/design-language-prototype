@@ -1,0 +1,5 @@
+{% macro iframe(path) %}
+  <div class="example">
+    <iframe frameborder="0" scrolling="no" id="desktop" onload="resizeIframe(this)" src="{{ path }}"></iframe>
+  </div>
+{% endmacro %}
