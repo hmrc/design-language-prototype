@@ -1,35 +1,38 @@
-{% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% set currentSection = 'header' %} {% set currentPage = 'govUkHeader' %} {% block content %}
+{% extends "layout.html" %}
 
-  <div class="grid-row">
-    <div class="column-full">
-      <h1 class="heading-xlarge">
-        <span class="heading-secondary">Header</span>
-        HMRC
-      </h1>
+{% block page_title %} GOV.UK prototype kit {% endblock %} {% set currentSection = 'header' %}
+{% set currentPage = 'govUkHeader' %} 
 
-      <h2 class="heading-medium">When to use this pattern</h2>
-      <p>This pattern should be used on all service pages.</p>
+{% block content %}
 
-      <!-- /patterns/header/govuk_header_partial -->
-      <h3 class="heading-small">Example</h3>
-      {{ iframe('/patterns/header/alpha_banner_partial.html') }}
-      <p>
-        <a href="/docs/examples/blank-govuk.html">View the header in a page</a>
-      </p>
+<div class="grid-row">
+  <div class="column-full">
+    <h1 class="heading-xlarge">
+      <span class="heading-secondary">Header</span> HMRC
+    </h1>
 
-      <h2 class="heading-medium">Components used in this pattern</h2>
-      <ul class="list list-bullet">
-        <li>
-          <a href="/components/govuk_banner/govuk-header-banner.html">Banner</a>
-        </li>
-        <li>Service name</li>
-        <li>Blue bar</li>
-      </ul>
-      <hr>
-      <p>
-        Discuss this pattern on
-        <a href="https://github.com/hmrc/design-language-documentation/issues/4">GitHub</a>
-      </p>
-    </div>
+    <h2 class="heading-medium">When to use this pattern</h2>
+    <p>This pattern should be used on all service pages.</p>
+    <h3 class="heading-small">Example</h3>
+    {{ iframe('/patterns/header/hmrc_header_partial.html') }}
+    <p>
+      <a href="/docs/examples/blank-govuk.html">View the header in a page</a>
+    </p>
+
+    <h2 class="heading-medium">Components used in this pattern</h2>
+    <ul class="list list-bullet">
+      <li>
+        <a href="/components/govuk_banner/govuk-header-banner.html">Banner</a>
+      </li>
+      <li>Service name</li>
+      <li>Blue bar</li>
+    </ul>
+    <hr>
+    <p>
+      Discuss this pattern on
+      <a href="https://github.com/hmrc/design-language-documentation/issues/4">GitHub</a>
+    </p>
   </div>
-{% endblock %}
+</div>
+
+{% endblock %} Ï
