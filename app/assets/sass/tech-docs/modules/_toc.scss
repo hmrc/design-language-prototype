@@ -60,7 +60,7 @@
 
   @include media(tablet) {
     .toc {
-      padding: $gutter-half $gutter;
+      padding: $gutter-half;
     }
 
     // Prevent the fixedsticky spacer from appearing if the browser is resized
