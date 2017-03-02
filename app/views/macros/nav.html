@@ -11,11 +11,7 @@
   {% endmacro %}
 
   <ul>
-    {# Intro section #}
-    <li>
-      <a href="/">Introduction</a>
-    </li>
-    {# END Intro section #} {# Templates section #}
+  {# Templates section #}
     <li>
       <a href="#" class="js-menu-section" data-sub-menu="templates-sub-menu">Templates</a>
       <ul id="templates-sub-menu" class="parent_list{{ showSubMenu(currentSection, ['templates']) }}">
@@ -118,9 +114,6 @@
       </ul>
       {# END Patterns sub menu section #}
     </li>
-    <li>
-      <hr>
-    </li>
     {# Components section #}
     <li>
       <a href="#components" class="js-menu-section"
@@ -139,9 +132,6 @@
       {# END Components sub menu section #}
     </li>
     {# END Components section #}
-    <li>
-      <hr>
-    </li>
     {# Elements section #}
     <li>
       <a href="#elements" class="js-menu-section" data-sub-menu="elements-sub-menu">
