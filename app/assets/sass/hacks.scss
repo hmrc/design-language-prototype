@@ -3,12 +3,11 @@
   position: relative;
   overflow: hidden;
   border: 1px solid #bfc1c3;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  padding-top: 30px;
-  padding-right: 15px;
-  padding-bottom: 15px;
-  padding-left: 15px;
+  padding: 30px 15px 15px;
+  margin: 15px auto;
+  box-sizing: border-box;
+  clear: both;
+  width: 100%;
   iframe{
     width: 100%;
   }
@@ -16,6 +15,7 @@
 
 @media (min-width: 641px) {
   .example {
+    transition: width 0.5s ease-in;
     padding-top: 45px;
     padding-right: 30px;
     padding-bottom: 30px;
@@ -61,4 +61,29 @@ iframe {
 // search box in the navigation
 .pattern-search {
     margin-bottom: 15px;
+}
+
+
+body {
+  &.small {
+    .example {
+      transition: width 0.5s ease-in;
+      width: 320px;
+      margin: 15px auto;
+    }
+  }
+  &.medium {
+    .example {
+      transition: width 0.5s ease-in;
+      width: 500px;
+      margin: 15px auto;
+    }
+  }
+  &.large {
+    .example {
+      transition: width 0.5s ease-in;
+      margin: 15px auto;
+      width: 100%;
+    }
+  }
 }
