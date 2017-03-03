@@ -1,0 +1,67 @@
+// styling the example box on the patterns page
+.example {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #bfc1c3;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 30px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  iframe{
+    width: 100%;
+  }
+}
+
+@media (min-width: 641px) {
+  .example {
+    padding-top: 45px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+  }
+}
+
+.example:before {
+  content: "EXAMPLE";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 12px;
+  line-height: 1.25;
+  background: #bfc1c3;
+  color: white;
+}
+
+@media (min-width: 641px) {
+  .example:before {
+    font-size: 14px;
+    line-height: 1.4285714286;
+  }
+}
+ // making the search box 100% width
+.hack_width-100  {
+  width: 100% !important;
+}
+
+// search box in the navigation
+.hack_pattern-search {
+    margin-bottom: 15px;
+}
+.hack_service-info {
+  border-top: 0px !important;
+}
+
+.hack_service-info-p {
+  float: right;
+  margin-top: 15px;
+}
+
+html {
+  background: #fff;
+}

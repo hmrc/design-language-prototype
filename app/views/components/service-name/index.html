@@ -1,8 +1,10 @@
-{% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% set currentSection = 'components' %} {% set currentPage = 'govUkHeaderBanner' %} {% block content %}
+{% extends "layout.html" %}
+{% block page_title %} GOV.UK prototype kit {% endblock %}
+{% block content %}
 
 <main id="content" role="main">
   <div class="grid-row">
-    <div class="column-two-thirds">
+    <div class="column-full">
 
       <h1 class="heading-xlarge">
         <span class="heading-secondary">Components</span>
@@ -11,11 +13,8 @@
 
       <h2 class="heading-medium">When to use this compnent</h2>
       <p>Every service should have a name.</p>
-
-      <!-- /patterns/header/govuk_header_partial -->
-      <h3 class="heading-small">Example</h3>
-      <!-- <div class="example width-150"> -->
-      <iframe class="width-150" frameborder="0" scrolling="no" style="height: 63px;" id="desktop" src="/patterns/header/govuk_header_partial.html"></iframe>
+      
+      {{ iframe('/patterns/header/govuk_header_partial.html') }}
 
       <h2 class="heading-medium">How to use this compoent</h2>
       <div class="govuk-govspeak">
