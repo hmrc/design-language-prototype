@@ -45,28 +45,19 @@
   }
 }
  // making the search box 100% width
-.width-100  {
+.hack_width-100  {
   width: 100% !important;
 }
-.width-150 {
-  width: 130%;
-}
-.width-200  {
-  width: 150%;
-}
 
-iframe {
-  border: 0px;
-}
 // search box in the navigation
-.pattern-search {
+.hack_pattern-search {
     margin-bottom: 15px;
 }
-.service-info {
+.hack_service-info {
   border-top: 0px !important;
 }
 
-.service-info-p {
+.hack_service-info-p {
   float: right;
   margin-top: 15px;
 }
