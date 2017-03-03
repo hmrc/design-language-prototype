@@ -1,5 +1,10 @@
 {% macro iframe(path) %}
-  <div class="example">
-    <iframe frameborder="0" scrolling="no" id="desktop" onload="resizeIframe(this)" src="{{ path }}"></iframe>
+  <div class="hack_iframe-content">
+    <button class="hack_button hack_button--resize" onclick="resizeWindow(this, 'small')">Small</button>
+    <button class="hack_button hack_button--resize" onclick="resizeWindow(this, 'medium')">Medium</button>
+    <button class="hack_button hack_button--resize" onclick="resizeWindow(this, 'large')">Large</button>
+    <div class="hack_example">
+      <iframe frameborder="0" scrolling="no" id="desktop" onload="resizeIframe(this)" src="{{ path }}"></iframe>
+    </div>
   </div>
 {% endmacro %}

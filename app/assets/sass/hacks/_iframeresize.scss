@@ -1,0 +1,26 @@
+//Adds a class to the body as a hook for resizing the iframes
+
+.hack_example {
+  transition: width 0.5s ease-in;
+  margin: 15px auto;
+  border: 1px solid red;
+
+  &.small {
+    width: 320px;
+  }
+
+  &.medium {
+    width: 500px;
+  }
+
+  &.large {
+    margin: 15px auto;
+  }
+
+}
+
+//Buttons for resizing the iframe
+
+button {
+
+}
