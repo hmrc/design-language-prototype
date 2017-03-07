@@ -1,26 +1,83 @@
 //Adds a class to the body as a hook for resizing the iframes
 
-.hack_example {
-  transition: width 0.5s ease-in;
-  margin: 15px auto;
-  border: 1px solid red;
+.hack_iframe-content {
 
-  &.small {
-    width: 320px;
+  .hack_iframe-controls {
+    display: none;
+    @media (min-width: 1024px) {
+      display: block;
+    }
   }
 
-  &.medium {
-    width: 500px;
-  }
-
-  &.large {
+  .hack_example {
+    transition: width 0.5s ease-in;
     margin: 15px auto;
+    box-sizing: border-box;
+
+    &.small {
+      width: 320px;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    &.medium {
+      width: 640px;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    &.large {
+      margin: 15px auto;
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
   }
 
-}
+  .hack_example__iframe{
+    width: 100%;
+  }
 
-//Buttons for resizing the iframe
 
-button {
+  .hack-example {
+    transition: width 0.5s ease-in;
+    margin: 15px auto;
 
+    &.small {
+      width: 320px;
+    }
+
+    &.medium {
+      width: 500px;
+    }
+
+    &.large {
+      margin: 15px auto;
+    }
+
+  }
+
+  //Buttons for resizing the iframe
+
+  .hack_button {
+    text-decoration: none;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 15px;
+    line-height: 32px;
+    height: auto;
+    display: inline-block;
+    text-align: center;
+    background-color: #DDDDDD;
+    cursor: pointer;
+    border: none;
+
+    &:focus{
+      outline: 3px solid #ffbf47;
+    }
+  }
 }
