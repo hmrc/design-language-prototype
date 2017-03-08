@@ -1,17 +1,14 @@
 {% macro iframe(path) %}
-  <div class="hack_iframe-content">
+  <div class="hack_iframe-content js-iframe-controls">
     <div class="hack_iframe-controls">
-      <button aria-controls="iframeResize" class="hack_button hack_button--resize"
-              onclick="resizeWindow(this, 'small')">Small
+      <button class="hack_button hack_button--resize js-iframe-resize-btn" value="small">Small
       </button>
-      <button aria-controls="iframeResize" class="hack_button hack_button--resize"
-              onclick="resizeWindow(this, 'medium')">Medium
+      <button class="hack_button hack_button--resize js-iframe-resize-btn" value="medium">Medium
       </button>
-      <button aria-controls="iframeResize" class="hack_button hack_button--resize"
-              onclick="resizeWindow(this, 'large')">Large
+      <button class="hack_button hack_button--resize js-iframe-resize-btn" value="large">Large
       </button>
     </div>
-    <div class="hack_example" id="iframeResize">
+    <div class="hack_example js-iframe">
       <iframe class="hack_example__iframe" frameborder="0" scrolling="no" id="desktop" onload="resizeIframe(this)"
               src="{{ path }}"></iframe>
     </div>
