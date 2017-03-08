@@ -1,5 +1,16 @@
 {% macro iframe(path) %}
-  <div class="example">
-    <iframe frameborder="0" scrolling="no" id="desktop" onload="resizeIframe(this)" src="{{ path }}"></iframe>
+  <div class="hack_iframe-content js-iframe-controls">
+    <div class="hack_iframe-controls">
+      <button class="hack_button hack_button--resize js-iframe-resize-btn" value="small">Small
+      </button>
+      <button class="hack_button hack_button--resize js-iframe-resize-btn" value="medium">Medium
+      </button>
+      <button class="hack_button hack_button--resize js-iframe-resize-btn" value="large">Large
+      </button>
+    </div>
+    <div class="hack_example js-iframe">
+      <iframe class="hack_example__iframe" frameborder="0" scrolling="no" id="desktop" onload="resizeIframe(this)"
+              src="{{ path }}"></iframe>
+    </div>
   </div>
 {% endmacro %}

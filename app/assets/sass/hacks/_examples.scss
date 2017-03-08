@@ -1,0 +1,99 @@
+// styling the example box on the patterns page
+.hack_example {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #bfc1c3;
+  width: 100%;
+}
+
+@media (min-width: 641px) {
+  .hack_example {
+   padding: 45px 30px 30px;
+  }
+}
+
+.hack_example:before {
+  content: "EXAMPLE";
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.2105263158em 0.7894736842em 0.2105263158em 0.7894736842em;
+  font-family: "nta", Arial, sans-serif;
+  font-weight: 400;
+  text-transform: none;
+  font-size: 12px;
+  line-height: 1.25;
+  background: #bfc1c3;
+  color: white;
+}
+
+@media (min-width: 641px) {
+  .hack_example:before {
+    font-size: 14px;
+    line-height: 1.4285714286;
+  }
+}
+// making the search box 100% width
+.hack_width-100  {
+  width: 100% !important;
+}
+
+// search box in the navigation
+.hack_pattern-search {
+  margin-bottom: 15px;
+}
+.hack_service-info {
+  border-top: 0px !important;
+}
+
+.hack_service-info-p {
+  float: right;
+  margin-top: 15px;
+}
+
+html {
+  background: #fff;
+}
+
+@import "_colours";
+
+.area {
+  font-family: 'nta', Sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  clear: both;
+  background: $fuschia;
+  color: white;
+  border: dashed $white 1px;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+/* area styles specific to certain ones */
+main.area {
+  min-height: 16em;
+}
+.header-proposition {
+  clear: none;
+  min-height: 6em;
+}
+
+
+// making the search box 100% width
+.width-100  {
+  width: 100% !important;
+}
+.width-150 {
+  width: 130%;
+}
+.width-200  {
+  width: 150%;
+}
+
+iframe {
+  border: 0px;
+}
+// search box in the navigation
+.pattern-search {
+  margin-bottom: 15px;
+}
