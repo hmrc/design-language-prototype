@@ -14,18 +14,39 @@
       <h3 class="heading-small">Examples</h3>
 
       <h4>Alpha banner</h4>
-      {{ statusHeader('Backlog', 'Service Design Tools', 'Hackpad', 'Github') }}
+
+      {{ statusHeader(
+      currentStatus='Backlog',
+      author='HMRC',
+      discussedOn='Hackpad',
+      editedOn='Github'
+      ) }}
 
       {{ iframe('/patterns/header/alpha_banner_partial.html') }}
 
-      {{ statusFooter('No', 'No', '15/06/2016', '28/02/2017') }}
+      {{ statusFooter(
+      inPrototype='No',
+      inAssetsFrontEnd='No',
+      firstSubmitted='15/06/2016',
+      lastUpdated='28/02/2017'
+      ) }}
 
       <h4>Beta banner</h4>
-      {{ statusHeader('Backlog', 'Service Design Tools', 'Hackpad', 'Github') }}
+      {{ statusHeader(
+      currentStatus='Backlog',
+      author='HMRC',
+      discussedOn='Hackpad',
+      editedOn='Github'
+      ) }}
 
       {{ iframe('/patterns/header/beta_banner_partial.html') }}
 
-      {{ statusFooter('No', 'No', '15/06/2016', '28/02/2017') }}
+      {{ statusFooter(
+      inPrototype='No',
+      inAssetsFrontEnd='No',
+      firstSubmitted='15/06/2016',
+      lastUpdated='28/02/2017'
+      ) }}
       <hr>
       <p>
         Discuss this pattern on

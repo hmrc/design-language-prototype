@@ -1,5 +1,5 @@
-{% macro statusHeader(currentStatus, author ,discussedOn, editedOn) %}
-<div class="status-metadata">
+{% macro statusHeader(currentStatus, author, discussedOn, editedOn) %}
+<div class="hack_status-metadata">
   <dl>
     <dt>Status:</dt>
     <dd><a href="#">{{ currentStatus }}</a></dd>
@@ -14,7 +14,7 @@
 {% endmacro %}
 
 {% macro statusFooter(inPrototype, inAssetsFrontEnd, firstSubmitted, lastUpdated) %}
-  <div class="status-metadata">
+  <div class="hack_status-metadata">
     <dl>
       <dt>In prototype kit:</dt>
       <dd>{{ inPrototype }}</dd>
