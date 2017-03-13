@@ -1,0 +1,29 @@
+{% macro statusHeader(currentStatus, author ,discussedOn, editedOn) %}
+<div class="status-metadata">
+  <dl>
+    <dt>Status:</dt>
+    <dd><a href="#">{{ currentStatus }}</a></dd>
+    <dt>Author:</dt>
+    <dd><a href="#">{{ author }}</a></dd>
+    <dt>Discuss on:</dt>
+    <dd><a href="#">{{ discussedOn }}</a></dd>
+    <dt>Edit on:</dt>
+    <dd><a href="#">{{ editedOn }}</a></dd>
+  </dl>
+</div>
+{% endmacro %}
+
+{% macro statusFooter(inPrototype, inAssetsFrontEnd, firstSubmitted, lastUpdated) %}
+  <div class="status-metadata">
+    <dl>
+      <dt>In prototype kit:</dt>
+      <dd>{{ inPrototype }}</dd>
+      <dt>In Assets Front End:</dt>
+      <dd>{{ inAssetsFrontEnd }}</dd>
+      <dt>First submitted:</dt>
+      <dd>{{ firstSubmitted }}</dd>
+      <dt>Last updated:</dt>
+      <dd>{{ lastUpdated }}</dd>
+    </dl>
+  </div>
+{% endmacro %}
