@@ -8,9 +8,8 @@
       <button class="hack_button hack_button--resize js-iframe-resize-btn" value="large">Large
       </button>
     </div>
-    <div class="hack_example js-iframe">
-      <iframe class="hack_example__iframe" frameborder="0" scrolling="no" id="desktop" onload="resizeIframe(this)"
-              src="{{ path }}"></iframe>
+    <div class="hack_example js-iframe-container">
+      <iframe class="hack_example__iframe js-iframe" frameborder="0" scrolling="no" id="desktop" src="{{ path }}"></iframe>
     </div>
   </div>
 {% endmacro %}
