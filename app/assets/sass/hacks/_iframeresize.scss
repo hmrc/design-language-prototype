@@ -11,7 +11,7 @@
 
   .hack_example {
     transition: width 0.5s ease-in;
-    margin: 15px auto;
+    margin: 15px 0;
     box-sizing: border-box;
 
     &.small {
@@ -29,7 +29,6 @@
     }
 
     &.large {
-      margin: 15px auto;
       @media (max-width: 1024px) {
         width: 100%;
       }
@@ -44,7 +43,6 @@
 
   .hack-example {
     transition: width 0.5s ease-in;
-    margin: 15px auto;
 
     &.small {
       width: 320px;
