@@ -3300,6 +3300,7 @@ $(document).ready(function () {
     $iframeControl.on("click", ".js-iframe-resize-btn", function () {
       var iframeSize = $(this).attr('value')
       $iframe.removeClass('small medium large').addClass(iframeSize)
+
     })
 
   })

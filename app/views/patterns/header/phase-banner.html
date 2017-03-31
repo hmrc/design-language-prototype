@@ -1,4 +1,7 @@
-{% extends "layout.html" %} {% block page_title %} GOV.UK prototype kit {% endblock %} {% set currentSection = 'header' %} {% set currentPage = 'govUkHeader' %} {% block content %}
+{% extends "layout.html" %}
+{% block page_title %} GOV.UK prototype kit {% endblock %}
+{% set currentSection = 'header' %} {% set currentPage = 'govUkHeader' %}
+{% block content %}
 
   <div class="grid-row">
     <div class="column-full">
@@ -8,6 +11,13 @@
         Phase banner
       </h1>
 
+      {{ statusHeader(
+      currentStatus='Backlog',
+      author='HMRC',
+      discussedOn='Hackpad',
+      editedOn='Github'
+      ) }}
+
       <h2 class="heading-medium">When to use this pattern</h2>
       <p>This pattern should be used on all service pages unless the service has passed it's live assessment.</p>
 
@@ -15,29 +25,10 @@
 
       <h4>Alpha banner</h4>
 
-      {{ statusHeader(
-      currentStatus='Backlog',
-      author='HMRC',
-      discussedOn='Hackpad',
-      editedOn='Github'
-      ) }}
 
       {{ iframe('/patterns/header/alpha_banner_partial.html') }}
 
-      {{ statusFooter(
-      inPrototype='No',
-      inAssetsFrontEnd='No',
-      firstSubmitted='15/06/2016',
-      lastUpdated='28/02/2017'
-      ) }}
-
       <h4>Beta banner</h4>
-      {{ statusHeader(
-      currentStatus='Backlog',
-      author='HMRC',
-      discussedOn='Hackpad',
-      editedOn='Github'
-      ) }}
 
       {{ iframe('/patterns/header/beta_banner_partial.html') }}
 
