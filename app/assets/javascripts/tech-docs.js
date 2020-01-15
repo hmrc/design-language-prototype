@@ -3295,12 +3295,23 @@ $(document).ready(function () {
 
   $iframeControls.each(function (i, iframeControl) {
     var $iframeControl = $(iframeControl)
-    var $iframe = $('.js-iframe', $iframeControl)
+    var $iframe = $('.js-iframe-container', $iframeControl)
 
     $iframeControl.on("click", ".js-iframe-resize-btn", function () {
       var iframeSize = $(this).attr('value')
       $iframe.removeClass('small medium large').addClass(iframeSize)
+
     })
 
   })
+
+  var $iframes = $('.js-iframe');
+
+  $iframes.on("load", function (event) {
+    var iframe = event.target
+    iframe.style.height = iframe.contentWindow.document.body.offsetHeight + 'px';
+  })
+
 })
+
+
